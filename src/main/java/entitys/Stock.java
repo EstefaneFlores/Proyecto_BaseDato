@@ -31,4 +31,5 @@ public class Stock {
     @Column(name = "modificacion")
     @Temporal(TemporalType.TIMESTAMP)
     private Date modificacion;
+    
 }
