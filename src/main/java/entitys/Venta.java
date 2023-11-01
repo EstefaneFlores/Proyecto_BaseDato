@@ -14,13 +14,13 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "registro_venta")
-public class Registro_Venta implements Serializable {
+@Table(name = "venta")
+public class Venta implements Serializable {
     public static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_registro_venta")
+    @Column(name = "id_venta")
     private Long idRegistroVenta;
 
     @Column(name = "productos_vendidos")
