@@ -1,4 +1,4 @@
-package com.example.demo;
+package entitys;
 
 public class Cliente {
     
