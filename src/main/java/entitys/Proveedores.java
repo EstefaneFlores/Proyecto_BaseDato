@@ -1,10 +1,14 @@
 package entitys;
 
+import java.sql.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 
 @Table(name = "proveedor")
 public class Proveedores {
@@ -22,5 +26,13 @@ public class Proveedores {
 
      @Column(name = "descripción_provedor")
      private String descripciónProvedor;
+
+     @Column(name = "registro")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date registro;
+
+    @Column(name = "modificacion")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date modificacion;
 
 }
