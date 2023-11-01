@@ -14,23 +14,23 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "factura")
-public class Factura implements Serializable {
-    private static final long serialVersionUID = 1L;
+@Table(name = "registro_venta")
+public class Registro_Venta implements Serializable {
+    public static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_factura")
-    private Long idFactura;
+    @Column(name = "id_registro_venta")
+    private Long idRegistroVenta;
 
-    @Column(name = "nro_factura")
-    private Long nroFactura;
+    @Column(name = "productos_vendidos")
+    private Long productosVendidos;
 
-    @Column(name = "descripcion_factura")
-    private Long descripcionFactura;
+    @Column(name = "cantidad_itens")
+    private Long cantidadItens;
 
-    @Column(name = "fecha_emision")
-    private Long fechaEmision;
+    @Column(name = "total_ventas")
+    private Long totalVentas;
 
     // --------------------------RELACION--------------------------------------
 
