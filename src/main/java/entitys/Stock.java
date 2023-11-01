@@ -1,5 +1,6 @@
 package entitys;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import jakarta.persistence.Column;
@@ -11,7 +12,9 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 @Table(name = "stock")
-public class Stock {
+public class Stock implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

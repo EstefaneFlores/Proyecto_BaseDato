@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import entitys.Cliente;
 
-public interface CategoriaDao extends CrudRepository<Cliente, Long>{
+public interface ClienteDao extends CrudRepository<Cliente, Long>{
     
 }
