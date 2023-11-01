@@ -10,19 +10,17 @@ import jakarta.persistence.Table;
 public class Proveedores {
 
      @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_proveedor")
-    private Long idProveedor;
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
+     @Column(name = "id_proveedor")
+     private Long idProveedor;
 
-
-    @Column(name = "nombre_provedor")
-    private String nombreProvedor;
+     @Column(name = "nombre_provedor")
+     private String nombreProvedor;
 
      @Column(name = "telefono_proveedor")
-    private String telefonoProveedor;
+     private String telefonoProveedor;
 
-
-         @Column(name = "descripción_provedor")
-    private String descripciónProvedor;
+     @Column(name = "descripción_provedor")
+     private String descripciónProvedor;
 
 }

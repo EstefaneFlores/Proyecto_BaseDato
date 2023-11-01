@@ -1,10 +1,14 @@
 package entitys;
 
+import java.sql.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 
 @Table(name = "stock")
 public class Stock {
@@ -13,10 +17,18 @@ public class Stock {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_stock")
     private Long idStock;
-    
+
     @Column(name = "maximo_Stock")
     private Long maximoStock;
 
-       @Column(name = "cantidad_productos")
+    @Column(name = "cantidad_productos")
     private Long cantidadProductos;
+
+    @Column(name = "registro")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date registro;
+
+    @Column(name = "modificacion")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date modificacion;
 }
