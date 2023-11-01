@@ -6,17 +6,17 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Table(name = "forma_pago")
-public class Forma_Pago {
+@Table(name = "stock")
+public class Stock {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_forma_pago")
-    private Long idFormaPago;
-
-    @Column(name = "tipo_moneda")
-    private Long tipoMoneda;
-
-
+    @Column(name = "id_stock")
+    private Long idStock;
     
+    @Column(name = "maximo_Stock")
+    private Long maximoStock;
+
+       @Column(name = "cantidad_productos")
+    private Long cantidadProductos;
 }
