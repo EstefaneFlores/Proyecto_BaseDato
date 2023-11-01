@@ -27,7 +27,7 @@ public class Venta implements Serializable {
     private Long idRegistroVenta;
 
     @Column(name = "productos_vendidos")
-    private Long productosVendidos;
+    private String productosVendidos;
 
     @Column(name = "cantidad_itens")
     private Long cantidadItens;

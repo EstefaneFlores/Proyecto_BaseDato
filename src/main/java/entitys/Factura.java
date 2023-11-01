@@ -27,13 +27,13 @@ public class Factura implements Serializable {
     private Long idFactura;
 
     @Column(name = "nro_factura")
-    private Long nroFactura;
+    private String nroFactura;
 
     @Column(name = "descripcion_factura")
-    private Long descripcionFactura;
+    private String descripcionFactura;
 
     @Column(name = "fecha_emision")
-    private Long fechaEmision;
+    private String fechaEmision;
 
     @Column(name = "registro")
     @Temporal(TemporalType.TIMESTAMP)

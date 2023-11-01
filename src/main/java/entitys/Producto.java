@@ -27,22 +27,22 @@ public class Producto implements Serializable {
     private Long idProducto;
 
     @Column(name = "nombre_producto")
-    private Long nombreProducto;
+    private String nombreProducto;
 
     @Column(name = "precio_Producto")
-    private Long precioProducto;
+    private Float precioProducto;
 
     @Column(name = "estado_Producto")
-    private Long estadoProducto;
+    private String estadoProducto;
 
     @Column(name = "fecha_Creacion")
-    private Long fechaCreacion;
+    private String fechaCreacion;
 
     @Column(name = "lote")
-    private Long lote;
+    private String lote;
 
     @Column(name = "descripcion")
-    private Long descripcion;
+    private String descripcion;
 
       @Column(name = "registro")
     @Temporal(TemporalType.TIMESTAMP)

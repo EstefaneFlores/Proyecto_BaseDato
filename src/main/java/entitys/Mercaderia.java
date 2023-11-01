@@ -27,19 +27,19 @@ public class Mercaderia implements Serializable {
     private Long idMercaderia;
 
     @Column(name = "descripcion_mercaderia")
-    private Long descripcionMercaderia;
+    private String descripcionMercaderia;
 
     @Column(name = "fecha_ingreso")
-    private Long fechaIngreso;
+    private Date fechaIngreso;
 
     @Column(name = "fecha_salida")
-    private Long fechaSalida;
+    private Date fechaSalida;
 
     @Column(name = "cantidad_mercaderia")
-    private Long cantidadMercaderia;
+    private String cantidadMercaderia;
 
     @Column(name = "estado_mercaderia")
-    private Long estadoMercaderia;
+    private String estadoMercaderia;
 
     @Column(name = "registro")
     @Temporal(TemporalType.TIMESTAMP)

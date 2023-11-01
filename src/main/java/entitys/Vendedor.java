@@ -34,7 +34,7 @@ public class Vendedor implements Serializable{
     private Long stockAsignado;
 
     @Column(name = "ruta_vendedor")
-    private Long rutaVendedor;
+    private String rutaVendedor;
 
     @Column(name = "registro")
     @Temporal(TemporalType.TIMESTAMP)

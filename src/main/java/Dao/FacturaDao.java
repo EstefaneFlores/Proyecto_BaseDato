@@ -1,5 +1,10 @@
 package Dao;
 
-public class FacturaDao {
+import org.springframework.data.repository.CrudRepository;
+
+import entitys.Factura;
+
+public interface FacturaDao  extends CrudRepository<Factura, Long>{
+
     
-}
+} 

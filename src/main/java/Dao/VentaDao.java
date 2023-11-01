@@ -1,5 +1,9 @@
 package Dao;
 
-public class VentaDao {
-    
+import org.springframework.data.repository.CrudRepository;
+
+import entitys.Venta;
+
+public interface VentaDao extends CrudRepository<Venta, Long>{
+
 }

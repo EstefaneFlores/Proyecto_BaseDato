@@ -24,25 +24,25 @@ public class Persona implements Serializable {
     private Long idPersona;
 
     @Column(name = "nombres")
-    private Long nombres;
+    private String nombres;
 
     @Column(name = "ap_paterno")
-    private Long apPaterno;
+    private String apPaterno;
 
     @Column(name = "ap_materno")
-    private Long apMaterno;
+    private String apMaterno;
 
     @Column(name = "ci")
-    private Long ci;
+    private String ci;
 
     @Column(name = "direccion")
-    private Long direccion;
+    private String direccion;
 
     @Column(name = "celular")
-    private Long celular;
+    private String celular;
 
     @Column(name = "estado")
-    private Long estado;
+    private String estado;
 
     @Column(name = "registro")
     @Temporal(TemporalType.TIMESTAMP)
