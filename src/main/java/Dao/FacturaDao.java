@@ -4,7 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import entitys.Factura;
 
-public interface FacturaDao  extends CrudRepository<Factura, Long>{
+public interface FacturaDao extends CrudRepository<Factura, Long> {
 
-    
-} 
+}
