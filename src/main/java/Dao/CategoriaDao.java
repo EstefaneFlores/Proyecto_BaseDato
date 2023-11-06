@@ -2,8 +2,8 @@ package Dao;
 
 import org.springframework.data.repository.CrudRepository;
 
-import entitys.Cliente;
+import entitys.Categoria; 
 
-public interface CategoriaDao extends CrudRepository<Cliente, Long>{
+public interface CategoriaDao extends CrudRepository<Categoria, Long>{
     
 }

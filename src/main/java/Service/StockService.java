@@ -13,9 +13,9 @@ public interface StockService {
 
     public void save(Stock stock);  //GUARDAR REGISTRO
 
-    public Stock findById(Long id);  // MOSTRAR UN REGSITRO
+    public Stock find(Long id);  // MOSTRAR UN REGSITRO
 
 
-    public void deleteById(Long id);
+    public void delete(Long id);
 
 }

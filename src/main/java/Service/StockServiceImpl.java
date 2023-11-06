@@ -5,33 +5,34 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import Dao.StockDao;
 import entitys.Stock;
 
 @Service
 public class StockServiceImpl implements StockService {
 
     @Autowired
-    private StockService stockService;
+    private StockDao stockDao;
 
     @Override
     public List<Stock> findAll() {
-      return (List<Stock>) stockService.findAll();
+      return (List<Stock>) stockDao.findAll();
     }
 
     @Override
     public void save(Stock stock) {
-      stockService.save(stock);
+      stockDao.save(stock);
 
     }
 
     @Override
-    public void deleteById(Long id) {
-      stockService.deleteById(id);
+    public void delete(Long id) {
+      stockDao.deleteById(id);
     }
 
     @Override
-    public Stock findById(Long id) {
-     return stockService.findById(id);
+    public Stock find(Long id) {
+     return stockDao.findById(id).orElse(null);
     }
     
 }

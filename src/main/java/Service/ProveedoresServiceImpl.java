@@ -5,32 +5,33 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import Dao.ProveedorDao;
 import entitys.Proveedores;
 
 @Service
 public class ProveedoresServiceImpl implements ProveedoresService{
 
     @Autowired
-    private ProveedoresServiceImpl mProve;
+    private ProveedorDao proveedorDao;
 
     @Override
     public List<Proveedores> findAll() {
-        return (List<Proveedores>) mProve.findAll();
+        return (List<Proveedores>) proveedorDao.findAll();
     }
 
     @Override
     public void save(Proveedores proveedores) {
-      mProve.save(proveedores);
+      proveedorDao.save(proveedores);
     }
 
     @Override
     public Proveedores findById(Long id) {
-       return  mProve.findById(id);
+       return  proveedorDao.findById(id).orElse(null);
     }
 
     @Override
     public void deleteById(Long id) {
-     mProve.deleteById(id);
+     proveedorDao.deleteById(id);
     }
 
 

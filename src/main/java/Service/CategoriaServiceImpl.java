@@ -5,32 +5,33 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import Dao.CategoriaDao;
 import entitys.Categoria;
 
 @Service
 public class CategoriaServiceImpl implements CategoriaService{
 
     @Autowired
-    private  CategoriaService categoriaService;
+    private  CategoriaDao categoriaDao;
 
     @Override
     public List<Categoria> findAll() {
-        return (List<Categoria>) categoriaService.findAll();
+        return (List<Categoria>) categoriaDao.findAll();
     }
 
     @Override
-    public void save(Categoria proveedores) {
-        categoriaService.save(proveedores);
+    public void save(Categoria categoria) {
+        categoriaDao.save(categoria);
     }
 
     @Override
     public Categoria findById(Long id) {
-       return categoriaService.findById(id);
+       return categoriaDao.findById(id).orElse(null);
     }
 
     @Override
     public void deleteById(Long id) {
-       categoriaService.deleteById(id);
+       categoriaDao.deleteById(id);
     }
     
 }
