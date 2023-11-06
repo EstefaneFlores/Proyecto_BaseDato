@@ -37,10 +37,10 @@ public class PersonaController {
     public String registroPersona(Model model) {
 
         model.addAttribute("persona", new Persona());
-        model.addAttribute("persona", personaService.findAll());
+        model.addAttribute("personas", personaService.findAll());
 
         model.addAttribute("cliente", new Cliente());
-        model.addAttribute("cliente", clienteService.findAll());
+        model.addAttribute("clientes", clienteService.findAll());
 
         model.addAttribute("vendedor", new Vendedor());
         model.addAttribute("vendedores", vendedorService.findAll());
@@ -105,7 +105,7 @@ public class PersonaController {
         model.addAttribute("clientes", clienteService.findAll());
         model.addAttribute("vendedor", vendedorService.findAll());
 
-        return "content :: content1"; /* FALTA TERMINAR AQUI */
+        return "content :: content1"; 
 
     }
 
@@ -131,7 +131,7 @@ public class PersonaController {
         model.addAttribute("vendedor", new Vendedor());
         model.addAttribute("vendedores", vendedorService.findAll());
 
-        return "listas/listasP"; //FALTA CRIAR LISTAS E LISTAP  ESTEFANE
+        return "listas/listasP"; 
     }
 
     /* GUARDAR CAMBIOS */

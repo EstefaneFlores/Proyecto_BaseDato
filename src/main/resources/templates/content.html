@@ -74,6 +74,76 @@
             </div>
         </div>
     </div>
+
+    <!---------------------------------------------------------FALTA CAMBIAR AQUI ESTEFANE----------------------------------------------------->
+
+    <div th:fragment="content2">
+        <input type="hidden" name="producto" th:field="${producto.idProducto}" value="">
+        <h4 class="header-title">INTRODUZCA LOS SIGUIENTES DATOS</h4>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom01">Nombre del Producto</label>
+                <input type="text" class="form-control" name="producto" th:field="${producto.nombres}"
+                    placeholder="Introduce tu nombre" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">Debes introducir un Nombre</div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom02">Apellido Paterno</label>
+                <input type="text" class="form-control" name="producto" th:field="${persona.apPaterno}"
+                    placeholder="Introduce tu apellido paterno" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">Debes introducir un apellido</div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom03">Apellido Materno</label>
+                <input type="text" class="form-control" name="producto" th:field="${persona.apMaterno}"
+                    placeholder="Introduce tu apellido Materno" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">Debes introducir un apellido</div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom04">C.I.</label>
+                <input type="number" class="form-control" name="producto" th:field="${persona.ci}"
+                    placeholder="Introduce tu C.I." required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">Debes introducir un C.I</div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>Género</label>
+                <select class="custom-select" name="producto" th:field="${persona.sexo}" required>
+                    <option value="">Selecciona tu genero</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                    <option value="otro">otro...</option>
+                </select>
+                <div class="invalid-feedback">Debes seleccionar un Genero</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom06">Nº Celular</label>
+                <input type="number" class="form-control" th:field="${producto.celular}"
+                    placeholder="Introduce el numero de celular" required>
+                <div class="invalid-feedback">Debes introducir un numero Cel.</div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom07">Domicilio</label>
+                <input type="text" class="form-control" th:field="${producto.direccion}" placeholder="Av/B/" required>
+                <div class="invalid-feedback">Debes introducir una dirección</div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
