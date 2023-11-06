@@ -18,14 +18,14 @@ import lombok.Setter;
 @Setter
 @Getter
 @Table(name = "vendedor")
-public class Vendedor implements Serializable{
+public class Vendedor implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_vendedor")
-    private Long  idVendedor;
+    private Long idVendedor;
 
     @Column(name = "telefono_vendedor")
     private Long telefonoVendedor;
@@ -44,6 +44,6 @@ public class Vendedor implements Serializable{
     @Temporal(TemporalType.TIMESTAMP)
     private Date modificacion;
 
-    //--------------------------RELACION--------------------------------------
+    // --------------------------RELACION--------------------------------------
 
 }

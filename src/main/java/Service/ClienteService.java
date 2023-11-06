@@ -13,7 +13,7 @@ public interface ClienteService {
 
     public void save(Cliente proveedores);  //GUARDAR REGISTRO
 
-    public Cliente findById(Long id);  // MOSTRAR UN REGSITRO
+    public Cliente findOne(Long id);  // MOSTRAR UN REGSITRO
 
     public void deleteById(Long id);
 

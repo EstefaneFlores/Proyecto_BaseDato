@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import entitys.Cliente;
 
 @Service
-public class ClienteServiceImpl implements ClienteService{
+public class ClienteServiceImpl implements ClienteService {
 
     @Autowired
     private ClienteService clienteService;
@@ -20,17 +20,17 @@ public class ClienteServiceImpl implements ClienteService{
 
     @Override
     public void save(Cliente proveedores) {
-       clienteService.save(proveedores);
+        clienteService.save(proveedores);
     }
 
     @Override
-    public Cliente findById(Long id) {
-        return clienteService.findById(id);
+    public Cliente findOne(Long id) {
+        return clienteService.findOne(id);
     }
 
     @Override
     public void deleteById(Long id) {
         clienteService.deleteById(id);
     }
-    
+
 }
