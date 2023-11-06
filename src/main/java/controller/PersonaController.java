@@ -14,6 +14,7 @@ import entitys.Vendedor;
 import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,7 +43,7 @@ public class PersonaController {
         model.addAttribute("cliente", clienteService.findAll());
 
         model.addAttribute("vendedor", new Vendedor());
-        model.addAttribute("vendedor", vendedorService.findAll());
+        model.addAttribute("vendedores", vendedorService.findAll());
         return "index/login"; // EFALTA ORGANIZAR EL RETURN DE AQUI
     }
 
@@ -98,13 +99,49 @@ public class PersonaController {
 
     /* modificar un registro con el modal */
     @RequestMapping(value = "/persona/{idPersona}")
-    public String getContent1(@PathVariable(value = "idPersona") Long idPersona, Model model, HttpServletRequest request) {
+    public String getContent1(@PathVariable(value = "idPersona") Long idPersona, Model model,
+            HttpServletRequest request) {
         model.addAttribute("persona", personaService.findOne(idPersona));
         model.addAttribute("clientes", clienteService.findAll());
         model.addAttribute("vendedor", vendedorService.findAll());
-        return "";     /*FALTA TERMINAR AQUI*/
+
+        return "content :: content1"; /* FALTA TERMINAR AQUI */
 
     }
 
+    /* EDITAR */
+
+    @RequestMapping(value = "/editarPersona/{idPersona}")
+    public String editarPersona(@PathVariable("idPersona") Long idPersona, Model model) {
+        Persona persona = personaService.findOne(idPersona);
+        model.addAttribute("persona", persona);
+
+        return "formularios/formPersona";
+    }
+
+    /* LISTA */
+
+    @RequestMapping(value = "ListaPersona")
+    public String listarPersona(Model model) {
+        model.addAttribute("personas", personaService.findAll());
+
+        model.addAttribute("cliente", new Cliente());
+        model.addAttribute("clientes", clienteService.findAll());
+
+        model.addAttribute("vendedor", new Vendedor());
+        model.addAttribute("vendedores", vendedorService.findAll());
+
+        return "listas/listasP"; //FALTA CRIAR LISTAS E LISTAP  ESTEFANE
+    }
+
+    /* GUARDAR CAMBIOS */
+
+    @PostMapping(value = "/guardarCambiosPersona")
+    public String guardarCambiosPersona(@ModelAttribute Persona persona) {
+        persona.setEstado("A");
+        personaService.save(persona);
+
+        return "redirect:/ListaPersona"; //FALTA LLISTA PESSOAS ESTEFANE
+    }
 
 }
